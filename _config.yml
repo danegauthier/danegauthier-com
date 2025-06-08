@@ -2,7 +2,8 @@ markdown: kramdown
 permalink: pretty
 exclude: ['README.*', 'LICENSE.txt']
 sass:
-    style: expanded
+  style: expanded
+  sass_dir: assets/css  # Needed so GitHub Pages compiles SCSS correctly
 
 # Main Headline, name required, subtitle optional
 name: Dane Gauthier
@@ -12,12 +13,10 @@ subtitle: Frontend Developer
 title: Fuse Core
 
 # Information for web crawlers / Google, all of them optional
-# 'description' and 'keywords' simply set the corresponding meta tags,
-# 'crawl' is the 'Robots' tag http://www.robotstxt.org/meta.html
 robots:
-    description: One line of text describing the content of the page in less than 140 characters.
-    keywords: foo, bar, baz
-    crawl: index,follow
+  description: One line of text describing the content of the page in less than 140 characters.
+  keywords: foo, bar, baz
+  crawl: index,follow
 
 # website address when deployed, also given as canonical link
 url: https://tsjensen.github.io/fuse-core/
@@ -31,18 +30,16 @@ baseurl: ''
 # In order to comply with EU cookie law, enable 'cookieconsent' to show a little popup asking users to acknowledge the GA cookies.
 # Also, some places require you to anonymize the users' IPs, which can be enabled via 'anonymizeip' below. You normally want that.
 # https://support.google.com/analytics/answer/2763052
-#ga:
 ga:
-    account: 'UA-120960520-1'
-    cookieconsent: true
-    anonymizeip: true
+  account: 'UA-120960520-1'
+  cookieconsent: true
+  anonymizeip: true
 
 # A picture of you, square(!), at least 180x180 pixels, more is better. Recommended file size < 100 KB.
 # Leave empty for generic placeholder image.
 # You can use your GitHub image:
-avatar: "images/profile.jpg"
+avatar: "assets/images/profile.jpg"
 #avatar:
-
 
 # All the social media and other sites that we want to link to. The 'show' flag determines if the link is shown.
 # The order of this list controls the order of the links on the page. Feel free to add.
@@ -67,10 +64,11 @@ links:
       show: true
       href: mailto:jonathan.doe@host.domain
       icon: fas fa-envelope
-         # Extra HTML which will be displayed below the links. Keep it short. Leave empty to disable.
-        # extra_html: www.google.com
-      extra_html: >
-            Any (multiline) text containing simple HTML,
-            such as links or ... lorem ipsum.
+
+# Extra HTML which will be displayed below the links. Keep it short. Leave empty to disable.
+extra_html: >
+  Any (multiline) text containing simple HTML,
+  such as links or ... lorem ipsum.
+
 
 #EOF
